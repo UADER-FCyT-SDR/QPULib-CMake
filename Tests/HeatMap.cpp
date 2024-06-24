@@ -42,7 +42,7 @@ struct Cursor {
     Float nextRot = rotate(next, 15);
     Where (index() == 15)
       result = nextRot;
-    End
+    EndBlock
   }
 
   void shiftRight(Float& result) {
@@ -50,7 +50,7 @@ struct Cursor {
     Float prevRot = rotate(prev, 1);
     Where (index() == 0)
       result = prevRot;
-    End
+    EndBlock
   }
 };
 
@@ -89,7 +89,7 @@ void step(Ptr<Float> map, Ptr<Float> mapOut, Int pitch, Int width, Int height)
       store(row[1].current - K * (row[1].current - sum * 0.125), p);
       p = p + 16;
 
-    End
+    EndBlock
 
     // Cursors are finished for this row
     for (int i = 0; i < 3; i++) row[i].finish();
@@ -97,7 +97,7 @@ void step(Ptr<Float> map, Ptr<Float> mapOut, Int pitch, Int width, Int height)
     // Move to the next input rows
     map = map + pitch*numQPUs();
 
-  End
+  EndBlock
 }
 
 // ============================================================================

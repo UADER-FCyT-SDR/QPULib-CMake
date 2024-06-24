@@ -29,7 +29,7 @@ void rot3D_1(Int n, Float cosTheta, Float sinTheta, Ptr<Float> x, Ptr<Float> y)
     Float yOld = y[i];
     x[i] = xOld * cosTheta - yOld * sinTheta;
     y[i] = yOld * cosTheta + xOld * sinTheta;
-  End
+  EndBlock
 }
 
 // ============================================================================
@@ -50,7 +50,7 @@ void rot3D_2(Int n, Float cosTheta, Float sinTheta, Ptr<Float> x, Ptr<Float> y)
     store(xOld * cosTheta - yOld * sinTheta, p);
     store(yOld * cosTheta + xOld * sinTheta, q);
     p = p+inc; q = q+inc;
-  End
+  EndBlock
 
   receive(xOld); receive(yOld);
 }
@@ -73,7 +73,7 @@ void rot3D_3(Int n, Float cosTheta, Float sinTheta, Ptr<Float> x, Ptr<Float> y)
     store(xOld * cosTheta - yOld * sinTheta, p);
     store(yOld * cosTheta + xOld * sinTheta, q);
     p = p+inc; q = q+inc;
-  End
+  EndBlock
 
   receive(xOld); receive(yOld);
 }

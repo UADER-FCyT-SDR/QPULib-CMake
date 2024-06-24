@@ -5,7 +5,7 @@ void loop(Int n)
   For (Int i = 0, i < n, i++)
     Print(i);
     Print("\n");
-  End
+  EndBlock
 }
 
 int main()

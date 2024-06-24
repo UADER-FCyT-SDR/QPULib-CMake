@@ -8,11 +8,11 @@ void gcd(Ptr<Int> p, Ptr<Int> q, Ptr<Int> r)
   While (any(a != b))
     Where (a > b)
       a = a-b;
-    End
+    EndBlock
     Where (a < b)
       b = b-a;
-    End
-  End
+    EndBlock
+  EndBlock
   *r = a;
 }
 

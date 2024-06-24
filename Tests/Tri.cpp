@@ -10,8 +10,8 @@ void tri(Ptr<Int> p)
     Where (n > 0)
       sum = sum+n;
       n = n-1;
-    End
-  End
+    EndBlock
+  EndBlock
   *p = sum;
 }
 

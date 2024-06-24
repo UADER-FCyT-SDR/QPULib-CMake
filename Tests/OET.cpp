@@ -19,15 +19,15 @@ void oet(Ptr<Int> p)
 
     Where (index() != 15)
       odds2 = min(evens3, odds3);
-    End
+    EndBlock
 
     Where (index() != 0)
       evens2 = rotate(max(evens3, odds3), 1);
-    End
+    EndBlock
 
     evens = evens2;
     odds  = odds2;
-  End
+  EndBlock
 
   *p     = evens;
   *(p+1) = odds;
